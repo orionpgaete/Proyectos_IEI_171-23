@@ -21,5 +21,6 @@ from holamundo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.saludo),
-    path('chaoo/', views.nosvemos)
+    path('chaoo/', views.nosvemos),
+    path('verhora/', views.fechaactual)
 ]
