@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Busqueda</title>
+</head>
+<body>
+    
+    <p>Estas buscando: <strong>{{query}}</strong></p>
+        
+    {% if prodW %}
+    <p>articulos encontrados: <strong>{{prodW|length}}</strong> productos</p>
+        <ul>
+            {% for resul in prodW %}
+            <li>
+                {{resul.nombre}}
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No esta el producto</p>
+    {% endif %}
+</body>
+</html>
